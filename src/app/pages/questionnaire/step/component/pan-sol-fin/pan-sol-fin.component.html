@@ -1,0 +1,32 @@
+<mat-card class="card-step">
+    <mat-label class="text-required-fields"> {{stepConstants.DATA_REQUIRED_1}}<b>(*)</b>{{stepConstants.DATA_REQUIRED_2}}</mat-label>
+    <mat-card class="card-step-form m-1">
+        <app-datos-solicitante></app-datos-solicitante> 
+    </mat-card>
+
+    <mat-card class="card-step-form m-1">
+        <app-datos-solicitud></app-datos-solicitud>
+    </mat-card>
+
+    <mat-card class="card-step-form m-1 mt-2" >
+        <mat-card-title class="card-step-form-title">{{stepConstants.ADD_DOC}}</mat-card-title>
+        <h3>AQUI CAMPOS PARA AÑADIR DOCUMENTO </h3>
+        <button mat-flat-button class="btn-action m-1">{{constants.dtLABEL_BUTTON_ADD}}</button>
+    </mat-card>
+
+    <mat-card class="card-step-form m-1 mt-2">
+        <mat-card-title class="card-step-form-title">{{stepConstants.ASSOCIATED_DOCUMENTS}}</mat-card-title>
+        <h3>AQUÍ VA TABLA DOCS ASOCIADOS</h3>
+    </mat-card>  
+
+    <button mat-flat-button class="btn-action m-1" (click)="aceptar()">{{constants.dtLABEL_BUTTON_ACCEPT}}</button>
+    <button mat-flat-button class="btn-action m-1 icon-right" (click)="this.utilService.goUp()">
+        <mat-icon title="{{constants.dtLABEL_BUTTON_UP}}">keyboard_arrow_up</mat-icon>
+    </button>    
+
+
+</mat-card>
+
+
+
+

@@ -1,0 +1,42 @@
+
+<div class="position-toolbar">
+  <mat-toolbar class="toolbar">
+
+  <mat-toolbar-row>
+    <span>
+      <mat-icon class="icon-back" (click)="back()">keyboard_backspace</mat-icon>
+    </span>
+    <span>
+      <p class="title-toolbar-name">Régimen Especial del Mar</p>
+      <p class="title-toolbar">{{constants.TITLE_TOOLBAR}}</p>
+      <p class="subtitle-toolbar">{{constants.SUBTITLE_TOOLBAR}}{{this.utilsService.number_step}}</p>
+    </span>
+
+    <span class="example-spacer"></span>
+    <mat-icon title="{{constants.dtLABEL_BUTTON_PRINT}}" (click)="print()">print</mat-icon>
+  </mat-toolbar-row>
+
+  </mat-toolbar>
+
+  <mat-card class="card-user-toolbar pl-2"><p class="title-toolbar-user">{{homeConstants.USER_NAME}}</p><p>{{this.utilsService.header_data.userName | uppercase}}</p></mat-card>
+  <mat-card class="card-user-toolbar" style="display: flex">
+    <ng-container *ngIf="this.utilsService.header_data.hidden">
+      <p><br ></p> <!-- queda vacío -->
+    </ng-container>
+    <ng-container *ngIf="!this.utilsService.header_data.hidden">
+      <p class="title-toolbar-user">{{homeConstants.NIB}}</p><p class="m-0">{{this.utilsService.header_data.nib | uppercase}}</p>
+      <p class="title-toolbar-user">{{homeConstants.BOAT_NAME}}</p><p class="m-0">{{this.utilsService.header_data.boatName | uppercase}}</p>
+      <p class="title-toolbar-user">{{homeConstants.REGISTRATION}}</p><p class="m-0">{{this.utilsService.header_data.registration | uppercase}}</p>
+      <p class="title-toolbar-user">{{homeConstants.CENTER}}</p><p class="m-0">{{this.utilsService.header_data.center | uppercase}}</p>
+    </ng-container>
+  </mat-card>
+
+</div>
+
+
+<div class="pb-2">
+  <router-outlet></router-outlet>
+</div>
+
+
+

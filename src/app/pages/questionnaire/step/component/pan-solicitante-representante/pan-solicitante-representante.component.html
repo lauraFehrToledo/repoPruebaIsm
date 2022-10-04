@@ -1,0 +1,51 @@
+<mat-card class="card-step">
+    <mat-label class="text-required-fields"> {{stepConstants.DATA_REQUIRED_1}}<b>(*)</b>{{stepConstants.DATA_REQUIRED_2}}</mat-label>
+    <mat-card class="card-step-form m-1">
+        <mat-card-title class="card-step-form-title">{{stepConstants.DETAILS_APPLICANT}}</mat-card-title>
+        <h3>Aqui va formulario con datos del solicitante</h3>
+    </mat-card>
+
+    <mat-card class="card-step-form m-1 mt-2">
+        <mat-card-title class="card-step-form-title">{{stepConstants.DETAILS_OWNER}}</mat-card-title>
+        <h3>Aqui va formulario con datos del armador o empresa armadora</h3>
+    </mat-card>
+
+    <mat-card class="card-step-form m-1 mt-2" *ngIf="isRepresentative">
+        <mat-card-title class="card-step-form-title">{{stepConstants.REPRESENTATIVE_LEGAL}}</mat-card-title>
+        <h3>Aqui va formulario con datos del representante si ingresa como tal</h3>
+    </mat-card>
+
+    <mat-card class="card-step-form m-1 mt-2">
+        <mat-card-title class="card-step-form-title">{{stepConstants.DETAILS_OWNER}}</mat-card-title>
+        <h3>Aqui va formulario con datos del armador o empresa armadora</h3>
+    </mat-card>
+
+    <mat-card class="card-step-form m-1 mt-2" *ngIf="isRepresentative">
+        <mat-card-title class="card-step-form-title">{{stepConstants.REPRESENTATIVE_LEGAL}}</mat-card-title>
+        <h3>Aqui va formulario con datos del representante si ingresa como tal</h3>
+    </mat-card>
+
+    <mat-card class="card-step-form m-1 mt-2">
+        <mat-card-title class="card-step-form-title">{{stepConstants.DETAILS_OWNER}}</mat-card-title>
+        <h3>Aqui va formulario con datos del armador o empresa armadora</h3>
+    </mat-card>
+
+    <mat-card class="card-step-form m-1 mt-2" *ngIf="isRepresentative">
+        <mat-card-title class="card-step-form-title">{{stepConstants.REPRESENTATIVE_LEGAL}}</mat-card-title>
+        <h3>Aqui va formulario con datos del representante si ingresa como tal</h3>
+    </mat-card>
+    <mat-card class="card-step-form m-1 mt-2">
+        <mat-card-title class="card-step-form-title">{{stepConstants.DETAILS_OWNER}}</mat-card-title>
+        <h3>Aqui va formulario con datos del armador o empresa armadora</h3>
+    </mat-card>
+
+    <mat-card class="card-step-form m-1 mt-2" *ngIf="isRepresentative">
+        <mat-card-title class="card-step-form-title">{{stepConstants.REPRESENTATIVE_LEGAL}}</mat-card-title>
+        <h3>Aqui va formulario con datos del representante si ingresa como tal</h3> -->
+    </mat-card> -->
+
+    <button mat-flat-button class="btn-action m-1" (click)="aceptar()">{{constants.dtLABEL_BUTTON_ACCEPT}}</button>
+    <app-btn-up></app-btn-up>
+
+</mat-card>
+

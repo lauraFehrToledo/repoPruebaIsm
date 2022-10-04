@@ -1,0 +1,30 @@
+<mat-card class="card-step">
+
+    <!-- Datos del solicitante -->
+    <mat-label class="text-required-fields"> {{stepConstants.DATA_REQUIRED_1}}<b>(*)</b>{{stepConstants.DATA_REQUIRED_2}}</mat-label>
+    <mat-card class="card-step-form m-1">
+        <app-datos-solicitante></app-datos-solicitante>          
+    </mat-card>
+
+    <!-- Datos de la solicitud -->
+    <mat-card class="card-step-form m-1 ">
+        <app-datos-solicitud></app-datos-solicitud>      
+    </mat-card>
+
+    <!-- Busqueda de centro -->
+    <mat-card class="card-step-form m-1 mt-2" >
+        <mat-card-title class="card-step-form-title">{{stepConstants.DETAILS_BOAT}}</mat-card-title>
+        <h3>AQUI VA FORMULARIO DE DATOS DEL BARCO</h3>
+    </mat-card>
+
+    <!-- Resultado busqueda centros -->
+    <mat-card class="card-step-form m-1 mt-2">
+        <mat-card-title class="card-step-form-title">{{stepConstants.SANITARY_RESPONSIBLE}}</mat-card-title>
+        <h3>AQUÍ VA FORMULARIO DE DATOS DEL RESP. SANITARIO</h3>
+    </mat-card>     
+  
+    <!-- Botones final -->
+    <button mat-flat-button class="btn-action m-1" (click)="aceptar()">{{constants.dtLABEL_BUTTON_ACCEPT}}</button>    
+    <app-btn-up></app-btn-up>
+    
+</mat-card>

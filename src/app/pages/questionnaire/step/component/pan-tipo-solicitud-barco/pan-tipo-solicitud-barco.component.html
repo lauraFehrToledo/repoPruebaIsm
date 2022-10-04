@@ -1,0 +1,34 @@
+<mat-card class="card-step">
+    <mat-label class="text-required-fields"> {{stepConstants.DATA_REQUIRED_1}}<b>(*)</b>{{stepConstants.DATA_REQUIRED_2}}</mat-label>
+    <mat-card class="card-step-form m-1">
+        <app-datos-solicitante></app-datos-solicitante> 
+    </mat-card>
+
+    <mat-card class="card-step-form m-1 mt-2">
+        <mat-card-title class="card-step-form-title">{{stepConstants.TYPE_REQUEST}}</mat-card-title>
+        <h3>AQUÍ VAN CHECKS BOX</h3>
+    </mat-card>
+
+    <mat-card class="card-step-form m-1 mt-2" >
+        <mat-card-title class="card-step-form-title">{{stepConstants.SEARCH_PARAMETERS}}</mat-card-title>
+        <imv-ui-input  type="text" [label]="'NIB'" [value]="''"></imv-ui-input>
+        <button mat-flat-button class="btn-action m-1" (click)="buscar()">{{constants.dtLABEL_BUTTON_SEARCH}}</button>
+    </mat-card>
+
+    <mat-card class="card-step-form m-1 mt-2" *ngIf="showSearch">
+        <mat-card-title class="card-step-form-title">{{stepConstants.SEARCH_RESULT}}</mat-card-title>
+        <h3>AQUÍ VA RESULTADOS TABLA CENTROS</h3>
+    </mat-card>  
+
+    <button mat-flat-button class="btn-action m-1" (click)="aceptar()">{{constants.dtLABEL_BUTTON_ACCEPT}}</button>
+    <app-btn-up></app-btn-up>
+    
+    <mat-divider *ngIf="showSearch"></mat-divider>
+    <mat-label class="text-required-fields" > {{stepConstants.TEXT_MODIFIED_ICON}}</mat-label>
+    <mat-label class="text-required-fields" *ngIf="showSearch"> {{stepConstants.TEXT_MODIFIED_OMI}}</mat-label>
+
+</mat-card>
+
+
+
+

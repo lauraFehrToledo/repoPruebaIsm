@@ -1,0 +1,67 @@
+@import '../../../../../../themes/variables_globales.scss';
+
+/** Toolbar **/
+.example-spacer {
+    flex: 1 1 auto;
+    }
+    
+  .toolbar {
+      background: $general-theme-color;
+      color: white;
+      .title-toolbar-name {
+        margin: 0;
+        font: 400 24px / 32px Roboto, "Helvetica Neue", sans-serif;
+        font-weight: 500;
+      }
+      .title-toolbar {
+          margin: 0;
+          font: 400 22px / 32px Roboto, "Helvetica Neue", sans-serif;
+          font-weight: 500;
+  
+      }
+      .subtitle-toolbar {
+          margin: 0;
+          font: 300 18px / 32px Roboto, "Helvetica Neue", sans-serif;
+      }
+
+
+  }
+
+  .position-toolbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100
+  }
+    
+  /** Tarjeta de usuarios debajo de toolbar **/
+  .card-user-toolbar {
+      padding: 0;
+      border-radius: 0;
+      border: 1px solid $general-theme-color;
+  
+  }
+
+  .title-toolbar-user {
+    color: $general-theme-color;
+    font-weight: bold;
+    float: left;
+    margin: 0 1rem;
+  }
+  
+    /*********************/
+
+    .icon-back {
+      margin-right: 1em;
+    }
+
+  /** Tamaño de altura de toolbar */
+
+  .mat-toolbar-multiple-rows {
+      min-height: 100px;
+  }
+
+  .mat-toolbar-row {
+    height: 100px;
+}

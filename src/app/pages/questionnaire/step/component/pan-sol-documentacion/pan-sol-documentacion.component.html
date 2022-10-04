@@ -1,0 +1,24 @@
+<mat-card class="card-step">
+
+    <!-- Datos del solicitante -->
+    <mat-label class="text-required-fields"> {{stepConstants.DATA_REQUIRED_1}}<b>(*)</b>{{stepConstants.DATA_REQUIRED_2}}</mat-label>
+    <mat-card class="card-step-form m-1">
+        <app-datos-solicitante></app-datos-solicitante>          
+    </mat-card>
+
+    <!-- Datos de la solicitud -->
+    <mat-card class="card-step-form m-1 ">
+        <app-datos-solicitud></app-datos-solicitud>            
+    </mat-card>
+
+    <!-- Datos de la solicitud -->
+    <mat-card class="card-step-form m-1 ">
+        <mat-card-title class="card-step-form-title">{{stepConstants.DOCUMENTS_REQUESTED}}</mat-card-title>
+        <h3>AQUÍ VA CHECKS DOCUMENTOS</h3>            
+    </mat-card>
+
+  
+    <!-- Botones final -->
+    <button mat-flat-button class="btn-action m-1" (click)="aceptar()">{{constants.dtLABEL_BUTTON_ACCEPT}}</button>    
+
+</mat-card>

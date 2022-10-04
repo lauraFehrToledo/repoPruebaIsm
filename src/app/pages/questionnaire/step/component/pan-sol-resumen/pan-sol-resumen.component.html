@@ -1,0 +1,64 @@
+<mat-card class="card-step">
+    <ng-container class="row">
+    
+        <!-- Datos de la solicitud -->
+        <mat-card class="card-step-form m-1 col-12">
+            <mat-card-title class="card-step-form-title">{{stepConstants.DETAILS_APPLICANT}}</mat-card-title>
+            <h3>AQUÍ VA DATOS DE LA SOLICITUD</h3>            
+        </mat-card>
+
+        <div class="m-1 mt-2 col-12 row">
+            <!-- Datos del solicitante -->
+            <mat-card class="card-step-form col-6">
+                <app-datos-solicitante></app-datos-solicitante>            
+            </mat-card>
+
+            <!-- Datos del representate legal -->
+            <mat-card class="card-step-form col-5">
+                <mat-card-title class="card-step-form-title">{{stepConstants.REPRESENTATIVE_LEGAL}}</mat-card-title>
+                <h3>AQUÍ VA DATOS DEL REPRESENTANTE</h3>            
+            </mat-card>
+        </div>
+
+        <mat-card class="card-step-form m-1 mt-2 col-12">
+            <mat-card-title class="card-step-form-title">{{stepConstants.INITIAL}}</mat-card-title>
+            <h3>AQUÍ VA DATOS ASOCIADOS DEPENDIENDO LA OPCION ELEGIDA EN PASO 2</h3>            
+        </mat-card>
+
+        <mat-card class="card-step-form m-1 mt-2 col-12">
+            <mat-card-title class="card-step-form-title">{{stepConstants.REPLACEMENT}}</mat-card-title>
+            <h3>AQUÍ VA TABLA MEDICAMENTOS DEPENDIENDO LA OPCION ELEGIDA EN PASO 2</h3>            
+        </mat-card>
+
+        <mat-card class="card-step-form m-1 mt-2 col-12">
+            <mat-card-title class="card-step-form-title">{{stepConstants.DETAILS_BOAT}}</mat-card-title>
+            <h3>AQUÍ VA DATOS DEPENDIENDO LA OPCION ELEGIDA EN PASO 2</h3>            
+        </mat-card>
+
+        <mat-card class="card-step-form m-1 mt-2 col-12">
+            <mat-card-title class="card-step-form-title">{{stepConstants.SANITARY_RESPONSIBLE}}</mat-card-title>
+            <h3>AQUÍ VA DATOS DEPENDIENDO LA OPCION ELEGIDA EN PASO 2</h3>            
+        </mat-card>
+
+        <mat-card class="card-step-form m-1 mt-2 col-12">
+            <mat-card-title class="card-step-form-title">{{stepConstants.DOCUMENTS_REQUESTED}}</mat-card-title>
+            <h3>AQUÍ VA DATOS DEPENDIENDO LA OPCION ELEGIDA EN PASO 2</h3>            
+        </mat-card>
+
+        <mat-card class="card-step-form m-1 mt-2 col-12">
+            <mat-card-title class="card-step-form-title">{{stepConstants.ASSOCIATED_DOCUMENTS}}</mat-card-title>
+            <h3>AQUÍ VA DOCS ASOCIADOS</h3>            
+        </mat-card>
+
+        <mat-card class="card-step-form m-1 mt-2 col-12">
+            <mat-card-title class="card-step-form-title">{{stepConstants.DATA_CLAUSE}}</mat-card-title>
+            <h3>AQUÍ VA CLAUSULA PROTECCIÓN DE DATOS</h3>            
+        </mat-card>
+
+    </ng-container>
+
+    <!-- Botones final -->
+    <button mat-flat-button class="btn-action m-1" (click)="aceptar()">{{constants.dtLABEL_BUTTON_SIGN_SEND}}</button>
+    <app-btn-up></app-btn-up>
+
+</mat-card>

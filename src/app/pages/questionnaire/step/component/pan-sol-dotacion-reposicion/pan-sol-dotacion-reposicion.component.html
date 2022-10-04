@@ -1,0 +1,37 @@
+<mat-card class="card-step">
+    <mat-label class="text-required-fields"> {{stepConstants.DATA_REQUIRED_1}}<b>(*)</b>{{stepConstants.DATA_REQUIRED_2}}</mat-label>
+    <mat-card class="card-step-form m-1">
+        <app-datos-solicitante></app-datos-solicitante> 
+    </mat-card>
+
+    <mat-card class="card-step-form m-1">
+        <app-datos-solicitud></app-datos-solicitud>
+    </mat-card>
+
+    <mat-card class="card-step-form m-1 mt-2" >
+        <mat-card-title class="card-step-form-title">{{stepConstants.SEARCH_PARAMETERS}}</mat-card-title>
+        <h3>SELECT DOTACION O REPOSICIÓN </h3>
+        <button mat-flat-button class="btn-action m-1" (click)="buscar()">{{constants.dtLABEL_BUTTON_SEARCH}}</button>
+
+        <mat-card class="card-step-form m-1 mt-2" *ngIf="showSearch">
+            <mat-card-title class="card-step-form-title">{{stepConstants.SEARCH_RESULT}}</mat-card-title>
+            <h3>AQUÍ VA RESULTADOS TABLA REPOSICIÓN MEDICAMENTOS SI ELIGE LA OPCION REPOSICIÓN</h3>
+        </mat-card>
+    </mat-card>
+
+  
+
+    <button mat-flat-button class="btn-action m-1" (click)="aceptar()">{{constants.dtLABEL_BUTTON_ACCEPT}}</button>
+    <button mat-flat-button class="btn-action m-1 icon-right" (click)="this.utilService.goUp()">
+        <mat-icon title="{{constants.dtLABEL_BUTTON_UP}}">keyboard_arrow_up</mat-icon>
+    </button>
+    
+    <mat-divider *ngIf="showSearch"></mat-divider>
+    <mat-label class="text-required-fields" > {{stepConstants.TEXT_MODIFIED_ICON}}</mat-label>
+    <mat-label class="text-required-fields" *ngIf="showSearch"> {{stepConstants.TEXT_MODIFIED_OMI}}</mat-label>
+
+</mat-card>
+
+
+
+
